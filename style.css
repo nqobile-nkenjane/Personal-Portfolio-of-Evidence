@@ -434,7 +434,120 @@ section.block {
 .demo-button:hover {
   transform: translateY(-2px);
   opacity: .9;
+}/* ---------- DIGITAL COMPETENCY PRESENTATION ---------- */
+
+.presentation-evidence {
+  margin-top: 45px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
 }
+
+.presentation-evidence h3 {
+  margin: 0 0 10px;
+}
+
+.presentation-evidence p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.presentation-viewer {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.slide-wrapper {
+  position: relative;
+  background: #07101f;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.slide-wrapper img {
+  width: 100%;
+  display: block;
+  height: auto;
+  transition: opacity .3s ease;
+}
+
+.slide-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  background: rgba(0,0,0,.75);
+  color: white;
+  border-radius: 20px;
+  font-size: .8rem;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.slide-controls button {
+  padding: 10px 18px;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.slide-controls button:hover {
+  border-color: var(--amber);
+  transform: translateY(-2px);
+}
+
+.slide-help {
+  text-align: center;
+  font-size: .82rem;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+
+/* ---------- CYBORG SKILLS PROJECT ---------- */
+
+.cyborg-evidence {
+  margin-top: 35px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.cyborg-evidence h3 {
+  margin: 0 0 10px;
+}
+
+.cyborg-evidence p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.video-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--amber);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: transform .2s, opacity .2s;
+}
+
+.video-button:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+  }
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
