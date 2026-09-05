@@ -643,4 +643,31 @@ footer {
   section.block { padding: 70px 6vw; }
   .hero { padding: 120px 6vw 60px; }
   .letter { padding: 26px 22px; }
+}/* CERTIFICATE MODAL */
+.cert-scroll { max-height: 78vh; overflow-y: auto; padding-right: 8px; }
+.cert-list { display: flex; flex-direction: column; gap: 22px; margin-top: 10px; }
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--sage);
+  border-radius: 6px;
+  padding: 26px 30px;
+  text-align: left;
 }
+.cert-card .cert-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.cert-card .cert-award,
+.cert-card .cert-for { color: var(--muted); font-size: 0.85rem; margin: 0 0 4px; }
+.cert-card .cert-name { font-family:'Fraunces', serif; font-size:1.15rem; font-weight:600; color: var(--text); margin: 0 0 12px; }
+.cert-card .cert-course { font-family:'Fraunces', serif; font-size:1.5rem; font-weight:600; color: var(--amber); margin: 0 0 14px; }
+.cert-card .cert-program { color: var(--muted); font-size: 0.85rem; margin: 0 0 18px; }
+.cert-card .cert-bottom { display:flex; justify-content: space-between; align-items:flex-end; border-top: 1px solid var(--line); padding-top: 14px; }
+.cert-card .cert-signer { font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color: var(--muted); line-height:1.6; }
+.cert-card .cert-date { text-align:right; font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color: var(--text); }
+.cert-card .cert-date .label { display:block; color: var(--muted); font-size:0.65rem; margin-top:2px; }
