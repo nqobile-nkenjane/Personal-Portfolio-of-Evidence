@@ -18,7 +18,7 @@ const spy = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => spy.observe(s));
 // =========================================
-// DIGITAL COMPETENCY PRESENTATION
+// CANVA PRESENTATION
 // =========================================
 
 const presentationSlides = [
@@ -32,119 +32,58 @@ const presentationSlides = [
 ];
 
 let currentSlide = 0;
-let slideshowRunning = true;
-let slideshowTimer;
-
-const presentationSlide =
-  document.getElementById("presentationSlide");
-
-const slideNumber =
-  document.getElementById("slideNumber");
-
-const playPauseBtn =
-  document.getElementById("playPauseBtn");
 
 
-function showSlide(index) {
+function openPresentation() {
 
-  if (!presentationSlide) {
-    return;
-  }
+  document.getElementById("presentationModal").style.display = "flex";
 
-  if (index >= presentationSlides.length) {
-    currentSlide = 0;
-  }
+  currentSlide = 0;
 
-  if (index < 0) {
-    currentSlide = presentationSlides.length - 1;
-  }
+  showSlide();
 
-  presentationSlide.style.opacity = "0";
+}
 
-  setTimeout(() => {
 
-    presentationSlide.src =
-      presentationSlides[currentSlide];
+function closePresentation() {
 
-    slideNumber.textContent =
-      currentSlide + 1;
+  document.getElementById("presentationModal").style.display = "none";
 
-    presentationSlide.style.opacity = "1";
+}
 
-  }, 150);
+
+function showSlide() {
+
+  document.getElementById("presentationSlide").src =
+    presentationSlides[currentSlide];
+
+  document.getElementById("slideNumber").textContent =
+    (currentSlide + 1) + " / 7";
+
 }
 
 
 function nextSlide() {
 
-  currentSlide++;
+  if (currentSlide < presentationSlides.length - 1) {
 
-  if (currentSlide >= presentationSlides.length) {
-    currentSlide = 0;
+    currentSlide++;
+
+    showSlide();
+
   }
 
-  showSlide(currentSlide);
 }
 
 
 function previousSlide() {
 
-  currentSlide--;
+  if (currentSlide > 0) {
 
-  if (currentSlide < 0) {
-    currentSlide = presentationSlides.length - 1;
-  }
+    currentSlide--;
 
-  showSlide(currentSlide);
-}
-
-
-function startSlideshow() {
-
-  clearInterval(slideshowTimer);
-
-  slideshowTimer = setInterval(() => {
-
-    nextSlide();
-
-  }, 5000);
-}
-
-
-function stopSlideshow() {
-
-  clearInterval(slideshowTimer);
-
-}
-
-
-function toggleSlideshow() {
-
-  if (slideshowRunning) {
-
-    stopSlideshow();
-
-    slideshowRunning = false;
-
-    playPauseBtn.textContent = "▶ Play";
-
-  } else {
-
-    startSlideshow();
-
-    slideshowRunning = true;
-
-    playPauseBtn.textContent = "⏸ Pause";
+    showSlide();
 
   }
-
-}
-
-
-// Start automatically
-
-if (presentationSlide) {
-
-  startSlideshow();
 
 }
