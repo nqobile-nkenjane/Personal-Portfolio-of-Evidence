@@ -86,4 +86,9 @@ function previousSlide() {
 
   }
 
+}function openCertificates() {
+  document.getElementById("certificateModal").style.display = "flex";
+}
+function closeCertificates() {
+  document.getElementById("certificateModal").style.display = "none";
 }
