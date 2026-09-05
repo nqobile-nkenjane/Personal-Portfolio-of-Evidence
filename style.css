@@ -399,7 +399,42 @@ section.block {
   font-weight: 600;
 }
 .intro-text { max-width: 70ch; color: var(--muted); }
+/* ---------- EVIDENCE ACTION ---------- */
 
+.evidence-action {
+  margin-top: 45px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--amber);
+  border-radius: 6px;
+  max-width: 700px;
+}
+
+.evidence-action h3 {
+  margin: 0 0 10px;
+}
+
+.evidence-action p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.demo-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--amber);
+  color: #0E1A2B;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: transform .2s, opacity .2s;
+}
+
+.demo-button:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
