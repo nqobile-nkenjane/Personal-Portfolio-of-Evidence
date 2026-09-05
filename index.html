@@ -162,116 +162,80 @@
       <figcaption>My personal finance budget and charts, built in Google Sheets.</figcaption>
     </figure>
   </div>  </div>
+  <!-- CANVA PRESENTATION -->
+  <div class="evidence-item">
+
+    <h3>Canva Presentation</h3>
+
+    <p>
+      My Canva presentation showcasing my digital skills,
+      learning and experiences during the d-Lab programme.
+    </p>
+
+    <button class="presentation-button" onclick="openPresentation()">
+      View Presentation
+    </button>
+
+  </div>
 
 
-  <!-- DIGITAL COMPETENCY PRESENTATION -->
-  <div class="presentation-evidence">
+  <!-- CYBORG SKILLS PROJECT VIDEO -->
+  <div class="evidence-item">
 
-    <div class="evidence-heading">
-      <span class="evidence-number">01</span>
-      <div>
-        <h3>Digital Competency Presentation</h3>
-        <p>
-          My Canva presentation showcasing my digital skills,
-          learning and experiences during the d-Lab programme.
-        </p>
-      </div>
-    </div>
+    <h3>Cyborg Skills Project Video</h3>
 
-    <div class="presentation-viewer">
+    <p>
+      A video showcasing my Cyborg Skills project,
+      what I learned and how I used digital tools.
+    </p>
 
-      <div class="slide-wrapper">
+    <a
+      href="PASTE-YOUR-LINKEDIN-VIDEO-LINK-HERE"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="video-button"
+    >
+      Click to Watch Video on LinkedIn
+    </a>
 
-        <img
-          id="presentationSlide"
-          src="images/1.png"
-          alt="Digital Competency Presentation"
-        >
+  </div>
 
-        <div class="slide-counter">
-          <span id="slideNumber">1</span> / 7
-        </div>
 
-      </div>
+  <!-- PRESENTATION SLIDESHOW -->
+  <div id="presentationModal" class="presentation-modal">
 
-      <div class="slide-controls">
+    <div class="presentation-content">
 
-        <button
-          type="button"
-          id="previousBtn"
-          onclick="previousSlide()"
-        >
+      <button
+        class="close-presentation"
+        onclick="closePresentation()">
+        ×
+      </button>
+
+      <img
+        id="presentationSlide"
+        src="images/1.png"
+        alt="Canva Presentation">
+
+      <div class="presentation-controls">
+
+        <button onclick="previousSlide()">
           ← Back
         </button>
 
-        <button
-          type="button"
-          id="playPauseBtn"
-          onclick="toggleSlideshow()"
-        >
-          ⏸ Pause
-        </button>
+        <span id="slideNumber">1 / 7</span>
 
-        <button
-          type="button"
-          id="nextBtn"
-          onclick="nextSlide()"
-        >
+        <button onclick="nextSlide()">
           Next →
         </button>
 
       </div>
 
-      <p class="slide-help">
-        Use the buttons to move through my presentation.
-      </p>
-
     </div>
 
   </div>
 
-
-  <!-- CYBORG SKILLS PROJECT -->
-  <div class="cyborg-evidence">
-
-    <div class="evidence-heading">
-      <span class="evidence-number">02</span>
-      <div>
-        <h3>Cyborg Skills Project</h3>
-
-        <p>
-          A video presentation of my Cyborg Skills project,
-          showing what I learned, how I used digital tools,
-          and how technology supported my learning journey.
-        </p>
-      </div>
-    </div>
-
-    <div class="cyborg-card">
-
-      <div class="cyborg-icon">▶</div>
-
-      <div class="cyborg-content">
-
-        <h4>Cyborg Skills Project Video</h4>
-
-        <p>
-          Watch my project video and learn more about my
-          Cyborg Skills experience.
-        </p>
-
-        <a
-          href="PASTE-YOUR-CYBORG-VIDEO-LINK-HERE"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="video-button"
-        >
-          WATCH CYBORG SKILLS VIDEO →
-        </a>
-
-      </div>
-
-    </div>
+  
 
   </div>
 
