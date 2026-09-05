@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Portfolio of Evidence | Nqobile Thandeka Nkenjane</title>
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color: #141426;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* ==============================
+           COLOURS
+        ============================== */
+
+        :root {
+            --navy: #050619;
+            --navy-light: #0b0d2b;
+            --purple: #7d3cff;
+            --purple-light: #b66cff;
+            --teal: #19cbb3;
+            --blue: #1769e0;
+            --orange: #ff7a00;
+            --white: #ffffff;
+            --light: #f7f8fc;
+            --text: #17172b;
+            --muted: #707080;
+            --border: #e2e3ec;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(5, 6, 25, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .navbar {
+            max-width: 1400px;
+            margin: auto;
+            padding: 14px 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            min-width: 210px;
+        }
+
+        .brand-logo {
+            font-size: 40px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #8b4dff, #16d9c3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .brand-text span {
+            display: block;
+            color: #b7b7c8;
+            font-size: 12px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 23px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.3s;
+            padding-bottom: 7px;
+        }
+
+        .nav-links a:hover {
+            color: #bd83ff;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 620px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 80% 25%, rgba(125,60,255,0.15), transparent 25%),
+                linear-gradient(115deg, #050619 0%, #080a24 60%, #090b28 100%);
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: auto;
+            min-height: 620px;
+            padding: 65px 55px;
+            display: grid;
+            grid-template-columns: 1fr 0.95fr;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            color: #20d9c1;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 1.02;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: #ffffff;
+        }
+
+        .hero-script {
+            color: #20d9c1;
+            font-size: 28px;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-family: cursive;
+        }
+
+        .hero-description {
+            max-width: 620px;
+            color: #d2d2df;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .hero-details {
+            display: flex;
+            gap: 38px;
+            flex-wrap: wrap;
+            margin-top: 38px;
+        }
+
+        .detail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .detail-icon {
+            width: 38px;
+            height: 38px;
+            border: 2px solid #a35aff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #c47cff;
+            font-size: 17px;
+        }
+
+        .detail small {
+            display: block;
+            color: #9d9daf;
+            font-size: 11px;
+        }
+
+        .detail strong {
+            display: block;
+            font-size: 13px;
+            color: white;
+        }
+
+
+        /* HERO PHOTO */
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo-frame {
+            width: 470px;
+            height: 470px;
+            overflow: hidden;
+            border-radius: 80px 10px 80px 10px;
+            transform: rotate(-2deg);
+            border: 2px solid rgba(176,105,255,0.5);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            background: #16182f;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quote-box {
+            position: absolute;
+            right: -15px;
+            bottom: 5px;
+            width: 270px;
+            padding: 24px;
+            border-radius: 20px 0 20px 0;
+            background: rgba(105, 40, 190, 0.88);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .quote-box .quote-mark {
+            font-size: 35px;
+            line-height: 20px;
+            color: white;
+        }
+
+        .quote-box p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .quote-box strong {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            color: #5ff0dc;
+            font-style: italic;
+        }
+
+
+        /* DECORATION */
+
+        .dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #9d4cff;
+            border-radius: 50%;
+        }
+
+        .dot.one {
+            top: 100px;
+            right: 42%;
+        }
+
+        .dot.two {
+            top: 160px;
+            right: 46%;
+        }
+
+        .dot.three {
+            bottom: 120px;
+            left: 48%;
+        }
+
+
+        /* ==============================
+           COMPETENCY INTRO
+        ============================== */
+
+        .competency-overview {
+            background: white;
+            border-radius: 28px 28px 0 0;
+            margin-top: -25px;
+            position: relative;
+            z-index: 3;
+            padding: 55px 6% 60px;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        .section-heading .eyebrow {
+            color: #6f36be;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+            margin: 5px 0 8px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           COMPETENCY CARDS
+        ============================== */
+
+        .competency-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .competency-card {
+            padding: 25px;
+            min-height: 315px;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid var(--border);
+            position: relative;
+            transition: 0.35s;
+            overflow: hidden;
+        }
+
+        .competency-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(20,20,60,0.12);
+        }
+
+        .competency-card.design {
+            border-top: 4px solid #14bfa8;
+        }
+
+        .competency-card.digital {
+            border-top: 4px solid #1769e0;
+        }
+
+        .competency-card.work {
+            border-top: 4px solid #ff7a00;
+        }
+
+        .competency-card.power {
+            border-top: 4px solid #7738c9;
+        }
+
+        .round-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+        }
+
+        .design .round-icon {
+            background: #dff9f4;
+        }
+
+        .digital .round-icon {
+            background: #e4efff;
+        }
+
+        .work .round-icon {
+            background: #fff0e2;
+        }
+
+        .power .round-icon {
+            background: #f0e6ff;
+        }
+
+        .card-number {
+            font-size: 12px;
+            font-weight: bold;
+            color: #777;
+        }
+
+        .competency-card h3 {
+            margin: 4px 0 8px;
+            font-size: 19px;
+        }
+
+        .design h3 {
+            color: #0a9d89;
+        }
+
+        .digital h3 {
+            color: #1760c8;
+        }
+
+        .work h3 {
+            color: #ed7100;
+        }
+
+        .power h3 {
+            color: #7134bb;
+        }
+
+        .competency-card > p {
+            color: #60606d;
+            font-size: 13px;
+            min-height: 48px;
+        }
+
+        .mini-list {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        .mini-list li {
+            font-size: 12px;
+            margin: 6px 0;
+            color: #555565;
+        }
+
+        .mini-list li::before {
+            content: "✓";
+            margin-right: 7px;
+            font-weight: bold;
+        }
+
+        .design .mini-list li::before {
+            color: #0a9d89;
+        }
+
+        .digital .mini-list li::before {
+            color: #1769e0;
+        }
+
+        .work .mini-list li::before {
+            color: #ff7a00;
+        }
+
+        .power .mini-list li::before {
+            color: #7738c9;
+        }
+
+        .explore-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .design .explore-btn {
+            background: #0aa98f;
+        }
+
+        .digital .explore-btn {
+            background: #1769e0;
+        }
+
+        .work .explore-btn {
+            background: #ff7800;
+        }
+
+        .power .explore-btn {
+            background: #7738c9;
+        }
+
+
+        /* ==============================
+           EVIDENCE PREVIEW
+        ============================== */
+
+        .evidence-preview {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .preview-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            min-height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .preview-card h3 {
+            font-size: 23px;
+            margin-bottom: 4px;
+        }
+
+        .preview-card > p {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .preview-title {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+
+        /* DESIGN PREVIEW */
+
+        .design-preview {
+            border-top: 4px solid #0aa98f;
+        }
+
+        .design-preview h3 {
+            color: #0a9d89;
+        }
+
+        .design-project {
+            background: #f0faf8;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .design-project strong {
+            font-size: 13px;
+        }
+
+        .design-project p {
+            font-size: 12px;
+            color: #5f626a;
+            margin-top: 6px;
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 7px;
+        }
+
+        .process-step {
+            padding: 10px 4px;
+            border: 1px solid #d7ebe7;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .process-step strong {
+            display: block;
+            margin-top: 4px;
+            font-size: 10px;
+        }
+
+
+        /* DIGITAL PREVIEW */
+
+        .digital-preview {
+            border-top: 4px solid #1769e0;
+        }
+
+        .digital-preview h3 {
+            color: #1769e0;
+        }
+
+        .digital-evidence {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .digital-item {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 10px;
+            border: 1px solid #dce6f9;
+            border-radius: 9px;
+            background: #f7faff;
+        }
+
+        .digital-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e1edff;
+            font-size: 18px;
+        }
+
+        .digital-item strong {
+            display: block;
+            font-size: 12px;
+        }
+
+        .digital-item span {
+            font-size: 10px;
+            color: #707080;
+        }
+
+
+        /* WORK PREVIEW */
+
+        .work-preview {
+            border-top: 4px solid #ff7800;
+        }
+
+        .work-preview h3 {
+            color: #e86d00;
+        }
+
+        .work-list {
+            list-style: none;
+        }
+
+        .work-list li {
+            display: flex;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .work-list .icon {
+            width: 32px;
+            height: 32px;
+            background: #fff0e2;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .work-list strong {
+            display: block;
+            font-size: 12px;
+        }
+
+        .work-list span {
+            font-size: 10px;
+            color: #777;
+        }
+
+
+        /* POWER PREVIEW */
+
+        .power-preview {
+            border-top: 4px solid #7738c9;
+        }
+
+        .power-preview h3 {
+            color: #7738c9;
+        }
+
+        .power-evidence {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+        }
+
+        .power-item {
+            text-align: center;
+            padding: 15px 8px;
+            border: 1px solid #e6dcf6;
+            border-radius: 9px;
+            background: #faf8ff;
+        }
+
+        .power-item .power-icon {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .power-item strong {
+            display: block;
+            font-size: 11px;
+        }
+
+        .power-item span {
+            font-size: 9px;
+            color: #777;
+        }
+
+
+        /* ==============================
+           LEARNING JOURNEY
+        ============================== */
+
+        .learning-journey {
+            background:
+                radial-gradient(circle at 90% 10%, rgba(117,52,205,0.2), transparent 25%),
+                linear-gradient(120deg, #050619, #0b0c2a);
+            color: white;
+            padding: 80px 6%;
+        }
+
+        .journey-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: auto auto 45px;
+        }
+
+        .journey-heading .eyebrow {
+            color: #22d6bf;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .journey-heading h2 {
+            font-size: 40px;
+            margin: 5px 0;
+        }
+
+        .journey-heading p {
+            color: #c7c7d5;
+            font-size: 14px;
+        }
+
+        .journey-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .journey-card {
+            padding: 28px 22px;
+            min-height: 240px;
+            border-radius: 13px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            transition: 0.3s;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .journey-icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .journey-card h3 {
+            font-size: 17px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .journey-card p {
+            color: #c7c7d5;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .journey-card ol {
+            padding-left: 18px;
+            color: #c7c7d5;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+
+        /* ==============================
+           CLOSING MESSAGE
+        ============================== */
+
+        .closing {
+            max-width: 1200px;
+            margin: 45px auto 0;
+            padding: 25px 35px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+        }
+
+        .closing p {
+            color: #d5d5df;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .closing strong {
+            display: block;
+            margin-top: 7px;
+            color: #20d9c1;
+            font-size: 17px;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #030411;
+            color: #9e9eae;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        footer span {
+            color: #20d9c1;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 1100px) {
+
+            .navbar {
+                padding: 13px 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr 0.8fr;
+                padding: 55px 35px;
+            }
+
+            .photo-frame {
+                width: 390px;
+                height: 390px;
+            }
+
+            .competency-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .journey-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            header {
+                position: relative;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .brand {
+                justify-content: center;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 55px 25px 75px;
+            }
+
+            .hero-description {
+                margin: auto;
+            }
+
+            .hero-details {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                margin-top: 25px;
+            }
+
+            .photo-frame {
+                width: 340px;
+                height: 340px;
+            }
+
+            .quote-box {
+                right: 0;
+            }
+
+            .evidence-preview {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero-script {
+                font-size: 22px;
+            }
+
+            .competency-overview {
+                padding: 45px 20px;
+            }
+
+            .competency-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-frame {
+                width: 290px;
+                height: 290px;
+            }
+
+            .quote-box {
+                width: 220px;
+                padding: 18px;
+            }
+
+            .process {
+                grid-template-columns: repeat(5,1fr);
+            }
+
+            .power-evidence {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2,
+            .journey-heading h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+=========================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#home" class="brand">
+
+            <div class="brand-logo">N</div>
+
+            <div class="brand-text">
+                <strong>Nqobile Thandeka Nkenjane</strong>
+                <span>d-lab Programme 2026</span>
+            </div>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">⌂ Home</a>
+            </li>
+
+            <li>
+                <a href="#design-thinking">♧ Design Thinking</a>
+            </li>
+
+            <li>
+                <a href="#digital">▣ Digital Competency</a>
+            </li>
+
+            <li>
+                <a href="#work">▣ Work Readiness</a>
+            </li>
+
+            <li>
+                <a href="#power">◉ Power Skills</a>
+            </li>
+
+            <li>
+                <a href="#journey">♧ My Learning Journey</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==========================================
+     HERO / HOME
+=========================================== -->
+
+<section class="hero" id="home">
+
+    <div class="dot one"></div>
+    <div class="dot two"></div>
+    <div class="dot three"></div>
+
+
+    <div class="hero-container">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                MY LEARNING JOURNEY • 2026
+            </div>
+
+
+            <h1>
+                My Personal
+                <span>Portfolio of Evidence</span>
+            </h1>
+
+
+            <div class="hero-script">
+                My d-lab Learning Journey
+            </div>
+
+
+            <p class="hero-description">
+
+                This portfolio showcases my growth, skills and
+                experiences throughout my d-lab journey. It includes
+                evidence of my learning, projects, reflections and
+                the impact I am creating.
+
+            </p>
+
+
+            <div class="hero-details">
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <small>Programme</small>
+                        <strong>2026</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ♙
+                    </div>
+
+                    <div>
+                        <small>Name</small>
+                        <strong>Nqobile Thandeka Nkenjane</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ♧
+                    </div>
+
+                    <div>
+                        <small>Country</small>
+                        <strong>South Africa</strong>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="hero-visual">
+
+
+            <div class="photo-frame">
+
+                <!--
+                    IMPORTANT:
+                    Put your photo inside an assets folder
+                    and name it:
+
+                    profile.jpg
+
+                    Example:
+                    assets/profile.jpg
+                -->
+
+                <img
+                    src="assets/profile.jpg"
+                    alt="Nqobile Thandeka Nkenjane"
+                >
+
+            </div>
+
+
+            <div class="quote-box">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <p>
+                    From learning to creating,
+                    from challenges to growth.
+                    I am building my future.
+                </p>
+
+                <strong>
+                    — Nqobile
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     COMPETENCY OVERVIEW
+=========================================== -->
+
+<section class="competency-overview">
+
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            My Competency Journey
+        </div>
+
+        <h2>
+            Evidence. Skills. Growth. Impact.
+        </h2>
+
+        <p>
+            I am developing across four key competency areas
+            throughout my d-lab programme.
+        </p>
+
+    </div>
+
+
+
+    <div class="competency-grid">
+
+
+        <!-- DESIGN THINKING -->
+
+        <article class="competency-card design">
+
+            <div class="round-icon">
+                💡
+            </div>
+
+            <div class="card-number">
+                01
+            </div>
+
+            <h3>
+                DESIGN THINKING
+            </h3>
+
+            <p>
+                Solving problems in creative,
+                human-centred and innovative ways.
+            </p>
+
+            <ul class="mini-list">
+
+                <li>Empathise</li>
+                <li>Define</li>
+                <li>Ideate</li>
+                <li>Prototype</li>
+                <li>Test</li>
+
+            </ul>
+
+            <a href="#design-thinking" class="explore-btn">
+                Explore →
+            </a>
+
+        </article>
+
+
+
+        <!-- DIGITAL -->
+
+        <article class="competency-card digital">
+
+            <div class="round-icon">
+                💻
+            </div>
+
+            <div class="card-number">
+                02
+            </div>
+
+            <h3>
+                DIGITAL COMPETENCY
+            </h3>
+
+            <p>
+                Using digital tools confidently
+                to work, create and solve problems.
+            </p>
+
+            <ul class="mini-list">
+
+                <li>Digital Tools</li>
+                <li>Data & Organisation</li>
+                <li>Digital Communication</li>
+                <li>Content Creation</li>
+                <li>Online Learning</li>
+
+            </ul>
+
+            <a href="#digital" class="explore-btn">
+                Explore →
+            </a>
+
+        </article>
+
+
+
+        <!-- WORK READINESS -->
+
+        <article class="competency-card work">
+
+            <div class="round-icon">
+                💼
+            </div>
+
+            <div class="card-number">
+                03
+            </div>
+
+            <h3>
+                WORK READINESS
+            </h3>
+
+            <p>
+                Preparing for the world of work
+                with professionalism and adaptability.
+            </p>
+
+            <ul class="mini-list">
+
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Professionalism</li>
+                <li>Adaptability</li>
+                <li>Problem Solving</li>
+
+            </ul>
+
+            <a href="#work" class="explore-btn">
+                Explore →
+            </a>
+
+        </article>
+
+
+
+        <!-- POWER SKILLS -->
+
+        <article class="competency-card power">
+
+            <div class="round-icon">
+                🧠
+            </div>
+
+            <div class="card-number">
+                04
+            </div>
+
+            <h3>
+                POWER SKILLS
+            </h3>
+
+            <p>
+                Building personal strength,
+                confidence and a growth mindset.
+            </p>
+
+            <ul class="mini-list">
+
+                <li>Self Awareness</li>
+                <li>Decision Making</li>
+                <li>Critical Thinking</li>
+                <li>Resilience</li>
+                <li>Growth Mindset</li>
+
+            </ul>
+
+            <a href="#power" class="explore-btn">
+                Explore →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     EVIDENCE PREVIEWS
+=========================================== -->
+
+<section style="padding: 55px 6%; background:#f7f8fc;">
+
+    <div class="evidence-preview">
+
+
+        <!-- DESIGN THINKING -->
+
+        <article class="preview-card design-preview" id="design-thinking">
+
+            <h3>
+                Design Thinking
+            </h3>
+
+            <p>
+                My journey of solving real problems
+                with creativity and empathy.
+            </p>
+
+
+            <div class="preview-title">
+                My Project: Foldable Food Stall
+            </div>
+
+            <div class="design-project">
+
+                <strong>
+                    How can township entrepreneurs protect
+                    their stock and profits from load shedding
+                    and crime?
+                </strong>
+
+                <p>
+                    My group explored the needs of township
+                    entrepreneurs and developed a foldable
+                    food stall/container concept.
+                </p>
+
+            </div>
+
+
+            <div class="preview-title">
+                My Design Thinking Process
+            </div>
+
+
+            <div class="process">
+
+                <div class="process-step">
+                    💬
+                    <strong>Empathise</strong>
+                </div>
+
+                <div class="process-step">
+                    🔎
+                    <strong>Define</strong>
+                </div>
+
+                <div class="process-step">
+                    💡
+                    <strong>Ideate</strong>
+                </div>
+
+                <div class="process-step">
+                    🛠️
+                    <strong>Prototype</strong>
+                </div>
+
+                <div class="process-step">
+                    👥
+                    <strong>Test</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DIGITAL -->
+
+        <article class="preview-card digital-preview" id="digital">
+
+            <h3>
+                Digital Competency
+            </h3>
+
+            <p>
+                Using digital tools to learn, create
+                and solve problems.
+            </p>
+
+
+            <div class="preview-title">
+                My Digital Evidence
+            </div>
+
+
+            <div class="digital-evidence">
+
+
+                <div class="digital-item">
+
+                    <div class="digital-icon">
+                        🎨
+                    </div>
+
+                    <div>
+                        <strong>
+                            Canva Infographic
+                        </strong>
+
+                        <span>
+                            Created an infographic using Canva
+                            to communicate information visually.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="digital-item">
+
+                    <div class="digital-icon">
+                        📊
+                    </div>
+
+                    <div>
+                        <strong>
+                            Google Sheets – Personal Budget
+                        </strong>
+
+                        <span>
+                            Created a personal budget to manage
+                            income, expenses and savings.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="digital-item">
+
+                    <div class="digital-icon">
+                        📄
+                    </div>
+
+                    <div>
+                        <strong>
+                            Google Docs – POE Orbit
+                        </strong>
+
+                        <span>
+                            Documented my reflections and learning
+                            throughout the programme.
+                        </span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WORK READINESS -->
+
+        <article class="preview-card work-preview" id="work">
+
+            <h3>
+                Work Readiness
+            </h3>
+
+            <p>
+                Building skills and behaviours to
+                thrive in the workplace.
+            </p>
+
+
+            <div class="preview-title">
+                My Evidence
+            </div>
+
+
+            <ul class="work-list">
+
+
+                <li>
+
+                    <div class="icon">
+                        ✉️
+                    </div>
+
+                    <div>
+                        <strong>
+                            Professional Communication
+                        </strong>
+
+                        <span>
+                            Emails, written work and presentations
+                        </span>
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="icon">
+                        🤝
+                    </div>
+
+                    <div>
+                        <strong>
+                            Teamwork
+                        </strong>
+
+                        <span>
+                            Collaborated with my team on projects
+                            and activities
+                        </span>
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="icon">
+                        💼
+                    </div>
+
+                    <div>
+                        <strong>
+                            LinkedIn & Professional Growth
+                        </strong>
+
+                        <span>
+                            Created and improved my professional
+                            profile and CV
+                        </span>
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="icon">
+                        🔄
+                    </div>
+
+                    <div>
+                        <strong>
+                            Adaptability
+                        </strong>
+
+                        <span>
+                            Learning new things and adjusting
+                            to new challenges
+                        </span>
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="icon">
+                        💡
+                    </div>
+
+                    <div>
+                        <strong>
+                            Problem Solving
+                        </strong>
+
+                        <span>
+                            Finding solutions and taking initiative
+                        </span>
+                    </div>
+
+                </li>
+
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- POWER SKILLS -->
+
+        <article class="preview-card power-preview" id="power">
+
+            <h3>
+                Power Skills
+            </h3>
+
+            <p>
+                Building my inner strength and
+                unlocking my potential.
+            </p>
+
+
+            <div class="preview-title">
+                My Evidence
+            </div>
+
+
+            <div class="power-evidence">
+
+
+                <div class="power-item">
+
+                    <div class="power-icon">
+                        🌟
+                    </div>
+
+                    <strong>
+                        Vision Board
+                    </strong>
+
+                    <span>
+                        My dreams, goals and the future
+                        I am building.
+                    </span>
+
+                </div>
+
+
+                <div class="power-item">
+
+                    <div class="power-icon">
+                        🧩
+                    </div>
+
+                    <strong>
+                        Saboteur Quiz
+                    </strong>
+
+                    <span>
+                        Understanding my behaviours
+                        and overcoming them.
+                    </span>
+
+                </div>
+
+
+                <div class="power-item">
+
+                    <div class="power-icon">
+                        ✉️
+                    </div>
+
+                    <strong>
+                        Letter to Future Self
+                    </strong>
+
+                    <span>
+                        A letter to my future self
+                        with promises and goals.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     MY LEARNING JOURNEY
+=========================================== -->
+
+<section class="learning-journey" id="journey">
+
+
+    <div class="journey-heading">
+
+        <div class="eyebrow">
+            My Learning Journey
+        </div>
+
+        <h2>
+            My Growth, Challenges & Future
+        </h2>
+
+        <p>
+            Reflecting on my growth, challenges
+            and future throughout my d-lab journey.
+        </p>
+
+    </div>
+
+
+
+    <div class="journey-grid">
+
+
+        <!-- SKILLS -->
+
+        <article class="journey-card">
+
+            <div class="journey-icon">
+                🚀
+            </div>
+
+            <h3>
+                Skills I'm Most Proud Of
+            </h3>
+
+            <ol>
+
+                <li>
+                    Digital Skills
+                </li>
+
+                <li>
+                    Problem Solving
+                </li>
+
+                <li>
+                    Communication & Teamwork
+                </li>
+
+            </ol>
+
+        </article>
+
+
+
+        <!-- CHALLENGES -->
+
+        <article class="journey-card">
+
+            <div class="journey-icon">
+                🌱
+            </div>
+
+            <h3>
+                Challenges I Faced
+            </h3>
+
+            <p>
+                Learning new digital tools,
+                technical problems and becoming
+                more confident.
+            </p>
+
+        </article>
+
+
+
+        <!-- OVERCOMING -->
+
+        <article class="journey-card">
+
+            <div class="journey-icon">
+                🔄
+            </div>
+
+            <h3>
+                How I Overcame Them
+            </h3>
+
+            <p>
+                Staying positive, asking for help,
+                practising and learning from
+                my mistakes.
+            </p>
+
+        </article>
+
+
+
+        <!-- GOALS -->
+
+        <article class="journey-card">
+
+            <div class="journey-icon">
+                🎯
+            </div>
+
+            <h3>
+                My Goals
+            </h3>
+
+            <p>
+                Continue learning, gain practical
+                work experience, build my career
+                and continue developing my IT,
+                digital and professional skills.
+            </p>
+
+        </article>
+
+
+    </div>
+
+
+
+    <div class="closing">
+
+        <p>
+            I am not where I want to be,
+            but I am proud of how far I have come.
+            I will keep learning, keep growing
+            and keep pushing forward.
+        </p>
+
+        <strong>
+            — Nqobile
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer>
+
+    <p>
+        <strong>
+            My Personal Portfolio of Evidence
+        </strong>
+    </p>
+
+    <p>
+        Nqobile Thandeka Nkenjane
+        •
+        <span>d-lab Programme 2026</span>
+    </p>
+
+    <p>
+        My learning. My growth. My journey.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
